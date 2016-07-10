@@ -1,0 +1,17 @@
+{
+  "name": "countries-app",
+  "description": "",
+  "main": "cc-app.js",
+  "license": "ISC",
+  "homepage": "https://github.com/nikthequik/countries-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "countries-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cc-app.js",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "bower": "^1.7.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikthequik/countries-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikthequik/countries-app/issues"
+  },
+  "homepage": "https://github.com/nikthequik/countries-app#readme"
+}
