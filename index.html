@@ -3,11 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Countries and Capitals</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/cc-app.css">
 </head>
 <body ng-app="cc-app">
+	<header>
+		<h1 id="title">Countries & Capitals</h1>
+		<hr>
+	</header>
 
-	<div ng-view></div>
+	<div ng-view class="container"></div>
+	<ul class="nav nav-pills col-md-4 col-md-offset-4" id="bottom-nav">
+  		<li role="presentation" class="active"><a href="#home">Home</a></li>
+  		<li role="presentation"><a href="#countries">Browse Countries</a></li>
+	  	<li role="presentation"><a href="#countries/:countryCode">Country Detail</a></li>
+	</ul>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

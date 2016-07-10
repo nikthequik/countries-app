@@ -1,1 +1,8 @@
-cc-app.css
+#title {
+	text-align: center;
+}
+
+#bottom-nav {
+	display: inline-block;
+}
+
