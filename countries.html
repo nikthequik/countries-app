@@ -1,1 +1,24 @@
-<p class="col-md-4 col-md-offset-4">countries</p>
+<div class="col-md-12">
+	<table>
+		<tr class="row">
+			<th class="col-md-3">Name</th>
+			<th class="col-md-2">Country Code</th>
+			<th class="col-md-2">Capital</th>
+			<th class="col-md-1">Area in km<super>2</super></th>
+			<th class="col-md-2">Population</th>
+			<th class="col-md-2">Continent</th>
+		</tr>
+	</table>
+	<div class="table-wrap">
+		<table >
+			<tr class="row" ng-repeat="country in cc.countries">
+				<td class="col-md-3">{{country.countryName}}</td>
+				<td class="col-md-2">{{country.countryCode}}</td>
+				<td class="col-md-2">{{country.capital}}</td>
+				<td class="col-md-1">{{country.areaInSqKm | number}}</td>
+				<td class="col-md-2">{{country.population | number}}</td>
+				<td class="col-md-2">{{country.continentName}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

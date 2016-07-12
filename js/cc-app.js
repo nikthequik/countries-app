@@ -17,15 +17,14 @@ angular.module('cc-app', ['ngAnimate', 'ngRoute'])
 		redirectTo: "/"
 	})
 }])
-.controller('CountryCtrl', ['$scope','$routeParams', 'getData', function($scope, $routeParams, getData){
+.controller('CountryCtrl', ['$scope','$routeParams', 'getData', '$cacheFactory', '$http', function($scope, $routeParams, getData, $cacheFactory, $http){
 	var cc = this;
 	cc.getCountries = function() {
-		getData('countryInfoJSON?')
+		getData('countryInfoJSON?', {cache: true})
 		.then(function(data){
 			cc.countries = data.geonames;
 			console.log(cc.countries);
 		});
-		
 	};
 	cc.getCountries();
 }])
