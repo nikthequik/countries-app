@@ -17,19 +17,34 @@ angular.module('cc-app', ['ngAnimate', 'ngRoute'])
 		redirectTo: "/"
 	})
 }])
-.controller('CountryCtrl', ['$scope','$routeParams', 'getData', '$cacheFactory', '$http', function($scope, $routeParams, getData, $cacheFactory, $http){
+.controller('CountryCtrl', ['getData', '$location',  function(getData, $location){
 	var cc = this;
 	cc.getCountries = function() {
-		getData('countryInfoJSON?', {cache: true})
+		getData('countryInfoJSON?', undefined, true)
 		.then(function(data){
 			cc.countries = data.geonames;
-			console.log(cc.countries);
 		});
 	};
 	cc.getCountries();
 }])
-.controller('DetailCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
+.controller('DetailCtrl', ['$routeParams', 'getData', function($routeParams, getData){
 	var dc = this;
-	dc.test = 'test';
-	dc.country = $routeParams.country;
+	dc.area = 
+	dc.country = JSON.parse($routeParams.country);
+	dc.getNeighbors = function(params) {
+		getData('neighboursJSON', {geonameId: params}, false)
+		.then(function(data){
+			
+			if (data.geonames) {
+				dc.neighborCount = data.geonames.length;
+				dc.neighbors = data.geonames;
+			}
+			else {
+				dc.neighborCount = "No";
+			}
+			
+			console.log(dc.country);
+		})
+	};
+	dc.getNeighbors(dc.country.geonameId);	
 }]);

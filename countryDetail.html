@@ -1,1 +1,6 @@
-<p class="col-md-4 col-md-offset-4">Country Detail</p>
+<h1 class="col-md-12 detail-title">{{dc.country.countryName}}</h1>
+<p class="col-md-6 col-md-offset-3">Population in country: {{dc.country.population | number}}</p>
+<p class="col-md-6 col-md-offset-3">Area: {{dc.country.areaInSqKm | number}}</p>
+<p class="col-md-6 col-md-offset-3">Capital: {{dc.country.areaInSqKm | number}}</p>
+<p class="col-md-6 col-md-offset-3">Population of Capital: {{dc.country.areaInSqKm | number}}</p>
+<p class="col-md-6 col-md-offset-3">{{dc.neighborCount}} neighbors: <span ng-if="dc.neighbors" ng-repeat="neighbor in dc.neighbors"><a ng-href="#countries/{{neighbor}}">{{neighbor.countryName}}</a>{{$last ? '' : ', '}}</span></p>
