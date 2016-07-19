@@ -45,3 +45,7 @@ th:last-child {
     color: #fff;
 }
 
+.hand {
+	cursor: pointer;
+}
+

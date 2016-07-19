@@ -17,20 +17,48 @@ angular.module('cc-app', ['ngAnimate', 'ngRoute'])
 		redirectTo: "/"
 	})
 }])
-.controller('CountryCtrl', ['getData', '$location',  function(getData, $location){
+.factory('allCountriesModel', function(){
+	return {
+		'countries': []
+	}
+})
+.controller('CountryCtrl', ['getData', '$location', 'allCountriesModel',  function(getData, $location, allCountriesModel){
 	var cc = this;
 	cc.getCountries = function() {
 		getData('countryInfoJSON?', undefined, true)
 		.then(function(data){
 			cc.countries = data.geonames;
+			allCountriesModel.countries = cc.countries;
 		});
 	};
 	cc.getCountries();
 }])
-.controller('DetailCtrl', ['$routeParams', 'getData', function($routeParams, getData){
+.controller('DetailCtrl', ['$routeParams', 'getData', 'allCountriesModel', '$location', function($routeParams, getData, allCountriesModel, $location){
 	var dc = this;
-	dc.area = 
+	
 	dc.country = JSON.parse($routeParams.country);
+	dc.allCountries = [];
+	
+	dc.goToCountry = function(neighbor) {
+		angular.forEach(allCountriesModel.countries, function(item){
+			if (item.countryCode === neighbor.countryCode) {
+				console.log(item);
+				$location.path('/countries/' + JSON.stringify(item));
+			}
+		});
+	}
+	dc.getCapital = function(featureCode, country) {
+		var params = {
+			"country": country,
+			"featureCode": featureCode,
+		}
+		getData('searchJSON', params, false)
+		.then(function(data){
+			console.log(data.geonames[0].name);
+			dc.capital = data.geonames[0].name;
+			dc.capPop = data.geonames[0].population;
+		})
+	};
 	dc.getNeighbors = function(params) {
 		getData('neighboursJSON', {geonameId: params}, false)
 		.then(function(data){
@@ -42,9 +70,8 @@ angular.module('cc-app', ['ngAnimate', 'ngRoute'])
 			else {
 				dc.neighborCount = "No";
 			}
-			
-			console.log(dc.country);
 		})
 	};
-	dc.getNeighbors(dc.country.geonameId);	
+	dc.getNeighbors(dc.country.geonameId);
+	dc.getCapital("PPLC", dc.country.countryCode);
 }]);
