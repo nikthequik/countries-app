@@ -56,52 +56,14 @@ th:last-child {
 	cursor: pointer;
 }
 
-.img-box {
-	margin: 0 auto;
+.img-box img{
+	display: inline-block;
+	margin: 0 4em;
 }
 
 .flag, .map {
 	max-width: 13vw;
 }
-/* 
-.animate-view-container {
-	position: relative;
-	min-height: 100%;
-}
-
-.animate-view.ng-enter,
-.animate-view.ng-leave {
-	transition: 0.5s linear all;
-	transform-origin: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	background: #eee;
-}
-
-.animate-view.ng-enter{ 
-	transform: scale(0, 0);
-	z-index: 100;
-}
-
-.animate-view.ng-enter.ng-enter-active { 
-	left: 0em;
-	transform: scale(1, 1);
-}
-
-.animate-view.ng-leave {
-	left: 0em;
-	z-index: 99;
-	transform: scale(1, 1);
-}
-
-.animate-view.ng-leave.ng-leave-active { 
-	left: 30em; 
-	transform: scale(0, 0);
-	transform-origin: center;
-} */
 
 .animate-view-container {
 	position: relative;
