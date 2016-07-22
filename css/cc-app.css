@@ -56,13 +56,17 @@ th:last-child {
 	cursor: pointer;
 }
 
+.img-box {
+	margin: 2em 0 0 0;
+}
+
 .img-box img{
 	display: inline-block;
 	margin: 0 4em;
 }
 
 .flag, .map {
-	max-width: 13vw;
+	max-height: 21vh;
 }
 
 .animate-view-container {
