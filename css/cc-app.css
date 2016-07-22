@@ -57,7 +57,11 @@ th:last-child {
 }
 
 .img-box {
-	text-align: center;
+	margin: 0 auto;
+}
+
+.flag, .map {
+	max-width: 13vw;
 }
 /* 
 .animate-view-container {
@@ -101,13 +105,13 @@ th:last-child {
 
 .animate-view-container {
 	position: relative;
+	min-height: 80vh;
 }
 
 .animate-view.ng-enter,
 .animate-view.ng-leave {
-	transition: .5s linear all;
+	transition: .6s linear all;
 	position: absolute;
-	background: #eee;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -116,25 +120,25 @@ th:last-child {
 
 .animate-view.ng-enter {
 	z-index: 100;
-	left: -200;
+	left: -100em;
 }
 
 .animate-view.ng-enter.ng-enter-active {
-	left: 0;
+	left: 0em;
 }
 
 .animate-view.ng-leave {
-	left: -200;
+	left: 0em;
 	z-index: 99;
+	opacity: 1;
 }
 
 .animate-view.ng-leave.ng-leave-active {
-	right: -200;
+	transform: scale(0,0);
+	opacity: 0;
 }
 
-.flag, .map {
-	max-width: 13vw;
-}
+
 
 
 
