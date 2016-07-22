@@ -54,15 +54,15 @@ angular.module('cc-app', ['ngAnimate', 'ngRoute'])
 		}
 		getData('searchJSON', params, false)
 		.then(function(data){
-			console.log(data.geonames[0].name);
-			dc.capital = data.geonames[0].name;
-			dc.capPop = data.geonames[0].population;
+			dc.toggleCapPop = data.geonames[0]===undefined ? 0 : 1;
+			dc.capital = data.geonames[0]===undefined ? "No Capital" : data.geonames[0].name;
+			dc.capPop = data.geonames[0]===undefined ? "No Inhabitants" : data.geonames[0].population;
+			console.log(dc.capPop);
 		})
 	};
 	dc.getNeighbors = function(params) {
 		getData('neighboursJSON', {geonameId: params}, false)
 		.then(function(data){
-			
 			if (data.geonames) {
 				dc.neighborCount = data.geonames.length;
 				dc.neighbors = data.geonames;
