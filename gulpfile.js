@@ -7,7 +7,7 @@ var minifyCss = require('gulp-minify-css');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
 var clean = require('gulp-clean');
-var deploy = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages');
 
 var bases = {
 	app : 'app/',
@@ -62,7 +62,7 @@ gulp.task('connect', function() {
 // deploy to gh-pages
 gulp.task('deploy', function() {
 	return gulp.src("./build/**/*")
-	.pipe(deploy())
+	.pipe(ghPages())
 });
 
 gulp.task('default', ['connect']);
