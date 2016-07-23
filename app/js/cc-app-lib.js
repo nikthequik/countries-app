@@ -24,4 +24,10 @@ angular.module('cc-app')
 		}
 		return $q.when(JSON.parse(data));
 	}
-}]);
+}])
+
+.factory('allCountriesModel', function(){
+	return {
+		'countries': []
+	}
+});

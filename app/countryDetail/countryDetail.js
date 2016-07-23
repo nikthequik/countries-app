@@ -1,38 +1,4 @@
-angular.module('cc-app', ['ngAnimate', 'ngRoute'])
-.config(['$routeProvider', function($routeProvider){
-	$routeProvider.when("/", {
-		templateUrl: "home.html"
-	})
-	.when("/countries", {
-		templateUrl: "countries.html",
-		controller: "CountryCtrl",
-		controllerAs: "cc"
-	})
-	.when("/countries/:country", {
-		templateUrl: "countryDetail.html",
-		controller: "DetailCtrl",
-		controllerAs: "dc"
-	})
-	.otherwise({
-		redirectTo: "/"
-	})
-}])
-.factory('allCountriesModel', function(){
-	return {
-		'countries': []
-	}
-})
-.controller('CountryCtrl', ['getData', '$location', 'allCountriesModel',  function(getData, $location, allCountriesModel){
-	var cc = this;
-	cc.getCountries = function() {
-		getData('countryInfoJSON?', undefined, true)
-		.then(function(data){
-			cc.countries = data.geonames;
-			allCountriesModel.countries = cc.countries;
-		});
-	};
-	cc.getCountries();
-}])
+angular.module('cc-app')
 .controller('DetailCtrl', ['$routeParams', 'getData', 'allCountriesModel', '$location', function($routeParams, getData, allCountriesModel, $location){
 	var dc = this;
 	

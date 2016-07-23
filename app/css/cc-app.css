@@ -9,6 +9,10 @@ body, html {
 	text-align: center;
 }
 
+.intro {
+	text-indent: 1.2em;
+}
+
 #ccView {
 	min-height: 80vh;
 }
@@ -52,6 +56,10 @@ th:last-child {
     color: #fff;
 }
 
+.home-flag {
+	display: inline-block;
+}
+
 .hand {
 	cursor: pointer;
 }
@@ -67,6 +75,11 @@ th:last-child {
 
 .flag, .map {
 	max-height: 21vh;
+	max-width: 30vw;
+}
+
+.detail-body {
+	min-height: 43vh;
 }
 
 .animate-view-container {
