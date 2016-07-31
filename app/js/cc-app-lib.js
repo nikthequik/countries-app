@@ -3,7 +3,7 @@ angular.module('cc-app')
 .constant('CC_APP_USERNAME', 'nikthequik')
 .constant('CC_APP_PREFIX', 'http://api.geonames.org/')
 
-.factory('getData', ['$http', '$q', 'CC_APP_PREFIX', 'CC_APP_USERNAME', function($http, $q, CC_APP_PREFIX, CC_APP_USERNAME){
+.service('getData', ['$http', '$q', 'CC_APP_PREFIX', 'CC_APP_USERNAME', function($http, $q, CC_APP_PREFIX, CC_APP_USERNAME){
 	return function(endpoint, params, cache){
 		var data = null;
 		params = (typeof params==='object') ? params : {};
