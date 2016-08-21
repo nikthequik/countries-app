@@ -8,5 +8,6 @@ angular.module('cc-app')
 			allCountriesModel.countries = cc.countries;
 		});
 	};
+	cc.tester = "test";
 	cc.getCountries();
 }]);

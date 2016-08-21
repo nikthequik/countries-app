@@ -18,27 +18,27 @@ module.exports = function(config) {
         'karma-requirejs',
         'karma-jasmine-html-reporter',
         'karma-html-reporter',
-       /* 'karma-jasmine-html-reporter-livereload',*/
-        
     ],
 
     // list of files / patterns to load in the browser
     files: [
-        './node_modules/karma-requirejs/lib/adapter.js',
+        
         './app/bower_components/jquery/dist/jquery.min.js',
         './node_modules/requirejs/require.js',
-        
+        './app/bower_components/bootstrap/dist/js/bootstrap.min.js',
+        './app/bower_components/angular/angular.js',
+        './node_modules/angular-mocks/angular-mocks.js',
+         './app/bower_components/angular-route/angular-route.min.js',
+        './app/bower_components/angular-animate/angular-animate.min.js',
+
+        './node_modules/karma-requirejs/lib/adapter.js',
         './node_modules/jasmine-core/lib/jasmine-core/jasmine.css',
         './node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
         './node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
         'test-main.js',
         './node_modules/karma-jasmine-html-reporter/src/lib/adapter.js',
-        
-        './app/bower_components/bootstrap/dist/js/bootstrap.min.js',
-        './app/bower_components/angular/angular.min.js',
-        './node_modules/angular-mocks/angular-mocks.js',
-        './app/bower_components/angular-route/angular-route.min.js',
-        './app/bower_components/angular-animate/angular-animate.min.js',
+
+       
         './app/js/cc-app.js',
         './app/js/cc-app-lib.js',
         './app/countries/countries.js',

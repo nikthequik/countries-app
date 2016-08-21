@@ -50,19 +50,4 @@ describe("cc-app", function() {
             $httpBackend.verifyNoOutstandingRequest();
         }));
     });
-
-    //Controller Tests
-    describe("CountryCtrl", function() {
-        var ctrl, scope;
-        beforeEach(inject(function($controller, $rootScope) {
-            scope = $rootScope.$new();
-            ctrl = $controller('CountryCtrl', {
-                $scope : scope,
-            });
-        }));
-
-        it('should query GeoNames from API on load', function() {
-            
-        })
-    });
 });
