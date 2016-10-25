@@ -56,8 +56,9 @@ th:last-child {
     color: #fff;
 }
 
-.home-flag {
+.introImg {
 	display: inline-block;
+	max-width: 	32vw;
 }
 
 .hand {
