@@ -1,0 +1,124 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;	
+}
+
+#title {
+	text-align: center;
+}
+
+.intro {
+	text-indent: 1.2em;
+}
+
+#ccView {
+	min-height: 80vh;
+}
+
+#bottom-nav {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.table-wrap {
+	overflow-y: scroll;
+	max-height: 72vh;
+}
+
+.detail-title {
+	text-align: center;
+	margin: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #eee;
+}
+
+th {
+	background-color: #ccc;
+
+}
+
+th:first-child {
+	border-radius: 3px 0 0 0;
+}
+
+th:last-child {
+	border-radius: 0 3px 0 0;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.introImg {
+	display: inline-block;
+	max-width: 	32vw;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.img-box {
+	margin: 2em 0 0 0;
+}
+
+.img-box img{
+	display: inline-block;
+	margin: 0 4em;
+}
+
+.flag, .map {
+	max-height: 21vh;
+	max-width: 30vw;
+}
+
+.detail-body {
+	min-height: 43vh;
+}
+
+.animate-view-container {
+	position: relative;
+	min-height: 80vh;
+}
+
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+	transition: .6s linear all;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.animate-view.ng-enter {
+	z-index: 100;
+	left: -100em;
+}
+
+.animate-view.ng-enter.ng-enter-active {
+	left: 0em;
+}
+
+.animate-view.ng-leave {
+	left: 0em;
+	z-index: 99;
+	opacity: 1;
+}
+
+.animate-view.ng-leave.ng-leave-active {
+	transform: scale(0,0);
+	opacity: 0;
+}
+
+
+
+
+
