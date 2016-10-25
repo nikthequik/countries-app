@@ -15,7 +15,6 @@
     "bootstrap": "^3.3.6",
     "angular-animate": "^1.5.8",
     "angular-route": "^1.5.8",
-    "angular": "^1.5.8",
-    "angular-bootstrap": "^2.2.0"
+    "angular": "^1.5.8"
   }
 }
