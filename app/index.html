@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Countries and Capitals</title>
-	<!-- build:css ./_assets/combined.css -->
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<title>Countries of the World</title>
 	<link href="img/globe.ico" rel="icon" type="image/x-icon" />
-	<link rel="stylesheet" href="css/cc-app.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Reem+Kufi" rel="stylesheet">
+	<!-- build:css ./assets/combined.css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ccApp.css">
 	<!-- endbuild -->
 </head>
 <body ng-app="cc-app">
 
-	<header>
-		<h1 id="title">Countries & Capitals</h1>
-		<hr>
+	<header id="banner">
+		<h1 id="title">Countries of the World</h1>
+		<hr id="divider">
 	</header>
 
 	<div class="animate-view-container">
@@ -27,8 +28,7 @@
 		</ul>
 	</div>
 	
-	<!-- build:js ./_assets/combined.js -->
-	
+	<!-- build:js ./assets/combined.js -->
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -37,6 +37,6 @@
 	<script src="js/cc-app-lib.js"></script>
 	<script src="countries/countries.js"></script>
 	<script src="countryDetail/countryDetail.js"></script>
-	
+	<!-- endbuild -->
 </body>
 </html>

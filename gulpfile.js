@@ -13,7 +13,6 @@ var bases = {
 	app : 'app/',
 	countries: 'app/countries/',
 	countryDetail: 'app/countryDetail/',
-
 }
 
 var paths = {
@@ -23,7 +22,7 @@ var paths = {
     '!./app/index.html',
     '!./app/bower_components/**/*.html'
   ],
-  images: ['./app/img/**/*.gif'],
+  images: ['./app/img/**/*'],
   index: './app/index.html',
   build: './build/'
 }
@@ -47,7 +46,7 @@ gulp.task('usemin', [ 'copy' ], function(){
       css: [ minifyCss(), 'concat' ],
       js: [ ngmin(), uglify() ]
     }))
-    .pipe(gulp.dest( paths.build ))
+    .pipe(gulp.dest( 'build/' ))
 });
 
 gulp.task('build', ['usemin']);
@@ -55,14 +54,8 @@ gulp.task('build', ['usemin']);
 // connect
 gulp.task('connect', function() {
   connect.server({
-    root: 'app/'
+    root: 'build/'
   });
-});
-
-// deploy to gh-pages
-gulp.task('deploy', function() {
-	return gulp.src("./build/**/*")
-	.pipe(ghPages())
 });
 
 gulp.task('default', ['connect']);
