@@ -1,5 +1,5 @@
-angular.module('cc-app', ['ngAnimate', 'ngRoute', 'ui.bootstrap'])
-.config(['$routeProvider', function($routeProvider){
+angular.module("cc-app", ["ngAnimate", "ngRoute", "ui.bootstrap"])
+.config(["$routeProvider", function($routeProvider){
 	$routeProvider.when("/", {
 		templateUrl: "home.html"
 	})
