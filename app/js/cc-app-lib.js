@@ -1,7 +1,7 @@
 angular.module('cc-app')
 
 .constant('CC_APP_USERNAME', 'nikthequik')
-.constant('CC_APP_PREFIX', 'http://api.geonames.org/')
+.constant('CC_APP_PREFIX', 'https://crossorigin.me/http://api.geonames.org/')
 
 .service('getData', ['$http', '$q', 'CC_APP_PREFIX', 'CC_APP_USERNAME', function($http, $q, CC_APP_PREFIX, CC_APP_USERNAME){
 	return function(endpoint, params, cache){
