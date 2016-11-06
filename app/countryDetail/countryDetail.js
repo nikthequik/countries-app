@@ -8,7 +8,6 @@ angular.module('cc-app')
 	dc.goToCountry = function(neighbor) {
 		angular.forEach(allCountriesModel.countries, function(item){
 			if (item.countryCode === neighbor.countryCode) {
-				console.log(item);
 				$location.path('/countries/' + JSON.stringify(item));
 			}
 		});
@@ -23,7 +22,6 @@ angular.module('cc-app')
 			dc.toggleCapPop = data.geonames[0]===undefined ? 0 : 1;
 			dc.capital = data.geonames[0]===undefined ? "No Capital" : data.geonames[0].name;
 			dc.capPop = data.geonames[0]===undefined ? "No Inhabitants" : data.geonames[0].population;
-			console.log(dc.capPop);
 		})
 	};
 	dc.getNeighbors = function(params) {

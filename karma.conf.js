@@ -17,8 +17,7 @@ module.exports = function(config) {
         'karma-jasmine',
         'karma-requirejs',
         'karma-jasmine-html-reporter',
-        'karma-html-reporter',
-       /* 'karma-jasmine-html-reporter-livereload',*/
+        'karma-html-reporter'
         
     ],
 

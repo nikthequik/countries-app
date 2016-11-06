@@ -22,9 +22,13 @@ body, html {
 	margin-bottom: 1em;
 }
 
+.country-head {
+	min-width: 80vw;
+}
+
 .table-wrap {
 	overflow-y: scroll;
-	max-height: 72vh;
+	max-height: 69vh;
 }
 
 .detail-title {
@@ -58,7 +62,7 @@ th:last-child {
 
 .introImg {
 	display: inline-block;
-	max-width: 	32vw;
+	max-width: 32vw;
 }
 
 .hand {
