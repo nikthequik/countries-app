@@ -4,28 +4,19 @@
 		<h1 class="row detail-title">{{dc.country.countryName}}</h1>
 	</div>
 	<div class="panel-body detailBody">	
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3">Population in country: {{dc.country.population | number}}</p>
+		<div class="img-box">
+			<img class="flag" ng-src="http://www.geonames.org/flags/x/{{dc.country.countryCode | lowercase}}.gif" /><br>
+			<img class="map" id="myImage" ng-src="http://www.geonames.org/img/country/250/{{dc.country.countryCode}}.png" />
 		</div>
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3">Area: {{dc.country.areaInSqKm | number}}</p>
+		<div class="detail-box">
+			<p class="col-md-6"><span class="detail-stat">Population</span>: {{dc.country.population | number}}</p>
+			<p class="col-md-6"><span class="detail-stat">Area</span>: {{dc.country.areaInSqKm | number}}</p>
+			<p class="col-md-6"><span class="detail-stat">Capital</span>: {{dc.capital}}</p>
+			<p class="col-md-6" ng-if="dc.toggleCapPop===0"><span class="detail-stat">Population of Capital</span>: {{dc.capPop}}</p>
+			<p class="col-md-6" ng-if="dc.toggleCapPop===1"><span class="detail-stat">Population of Capital</span>: {{dc.capPop | number}}</p>
+			<p class="col-md-6"><span class="detail-stat">{{dc.neighborCount}} neighbors</span>: <span class="hand" ng-click="dc.goToCountry(neighbor)" ng-if="dc.neighbors" ng-repeat="neighbor in dc.neighbors"><a>{{neighbor.countryName}}</a>{{$last ? '' : ', '}}</span></p>
 		</div>
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3">Capital: {{dc.capital}}</p>
-		</div>
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3" ng-if="dc.toggleCapPop===0">Population of Capital: {{dc.capPop}}</p>
-		</div>
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3" ng-if="dc.toggleCapPop===1">Population of Capital: {{dc.capPop | number}}</p>
-		</div>
-		<div class="row">
-			<p class="col-md-6 col-md-offset-3">{{dc.neighborCount}} neighbors: <span class="hand" ng-click="dc.goToCountry(neighbor)" ng-if="dc.neighbors" ng-repeat="neighbor in dc.neighbors"><a>{{neighbor.countryName}}</a>{{$last ? '' : ', '}}</span></p>
-		</div>
-		<div class="row text-center img-box">
-			<img class="flag" ng-src="http://www.geonames.org/flags/x/{{dc.country.countryCode | lowercase}}.gif" />
-			<img class="map" id='myImage' ng-src="http://www.geonames.org/img/country/250/{{dc.country.countryCode}}.png" />
-		</div>
+			
 	</div>
 	
 </section>
