@@ -1,5 +1,5 @@
 angular.module('cc-app')
-.controller('DetailCtrl', ['$routeParams', 'getData', 'allCountriesModel', '$location', function($routeParams, getData, allCountriesModel, $location){
+.controller('DetailCtrl', ['$routeParams', 'getData', '$location', function($routeParams, getData, $location){
 	var dc = this;
 	
 	dc.country = JSON.parse($routeParams.country);
