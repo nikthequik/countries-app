@@ -3,10 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Countries of the World</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="img/globe.ico" rel="icon" type="image/x-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Reem+Kufi" rel="stylesheet">
 	<!-- build:css ./assets/combined.css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="css/ccApp.css">
 	<!-- endbuild -->
 </head>
@@ -18,7 +20,7 @@
 	</header>
 
 	<div class="animate-view-container">
-		<div ng-view class="container animate-view" id="ccView"></div>
+		<div ng-view class="container-fluid animate-view" id="ccView"></div>
 	</div>
 
 	<div class="text-center">

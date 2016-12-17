@@ -43,6 +43,10 @@ body, html {
 	max-height: 72vh;
 }
 
+#country-table {
+	margin: 0 auto;
+}
+
 .detail-title {
 	text-align: center;
 	margin: 0;
@@ -160,6 +164,24 @@ th:last-child {
 .animate-view.ng-leave.ng-leave-active {
 	transform: scale(0,0);
 	opacity: 0;
+}
+
+@media (max-width: 600px) {
+	.animate-view-container {
+		font-size: 0.5em;
+	}
+
+	#title {
+		font-size: 2em;
+	}
+
+	.intro {
+		font-size: 2em;
+	}
+
+	.detail-title {
+		font-size: 3em;
+	}
 }
 
 
